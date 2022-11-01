@@ -39,6 +39,7 @@
                             <option value="custom">Własne ustawienia</option>
                         </select>
                         <div id="optionsDiv" style="display: none;">
+                            <div class="mb-3"></div>
                             <div class="mb-3">
                                 <label>Nadawca:</label>
                                 <input type="email" name="from" id="from" class="form-control" />
@@ -46,27 +47,34 @@
                             <div class="mb-3">
                                 <label>Server SMTP:</label>
                                 <input type="text" name="smtpAddress" id="smtpAddress" class="form-control" />
+                            </div>
+                            <div class="mb-3">
                                 <label>Port:</label>
                                 <input type="number" name="smtpPort" id="smtpPort" class="form-control" min="0" max="65535" />
+                            </div>
+                            <div class="mb-3">
                                 <label>Użytkownik</label>
                                 <input type="text" name="smtpUser" id="smtpUser" class="form-control" />
+                            </div>
+                            <div class="mb-3">
                                 <label>Hasło</label>
                                 <input type="password" name="smtpPass" id="smtpPass" class="form-control" />
                             </div>
-
                         </div>
+
                     </div>
-
-
-
-
-
-                    <div class="mb-3">
-                        <input type="submit" name="submit_button" class="btn btn-primary" value="Wyślij" />
-                    </div>
-                </form>
             </div>
+
+
+
+
+
+            <div class="mb-3">
+                <input type="submit" name="submit_button" class="btn btn-primary" value="Wyślij" />
+            </div>
+            </form>
         </div>
+    </div>
     </div>
 
     <script>
