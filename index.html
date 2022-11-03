@@ -7,8 +7,10 @@
 </head>
 
 <body onload="optionsChanged()">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <div class="container">
         <h1 class="text-center mt-3 mb-3">Mailer</h1>
         <div class="card">
@@ -50,7 +52,8 @@
                             </div>
                             <div class="mb-3">
                                 <label>Port:</label>
-                                <input type="number" name="smtpPort" id="smtpPort" class="form-control" min="0" max="65535" />
+                                <input type="number" name="smtpPort" id="smtpPort" class="form-control" min="0"
+                                    max="65535" />
                             </div>
                             <div class="mb-3">
                                 <label>Użytkownik</label>
@@ -60,6 +63,10 @@
                                 <label>Hasło</label>
                                 <input type="password" name="smtpPass" id="smtpPass" class="form-control" />
                             </div>
+                        </div>
+                        <div id="signDiv"><br>
+                            <input type="checkbox" id="smimesign" name="smimesign" checked="true">
+                            <label for="signmime">Podpisz wiadomość certyfikatem S/MIME (zalecane)</label><br>
                         </div>
 
                     </div>
@@ -77,7 +84,9 @@
         </div><br>
         <div class="card">
             <div class="card-header">Kod źródłowy</div>
-            <div class="card-body"><a href="https://github.com/karolpeszek/mailer-client" target="_blank"><label>Klient</label></a><br><a href="https://github.com/karolpeszek/mailer-server" target="_blank"><label>Serwer</label></a>
+            <div class="card-body"><a href="https://github.com/karolpeszek/mailer-client"
+                    target="_blank"><label>Klient</label></a><br><a href="https://github.com/karolpeszek/mailer-server"
+                    target="_blank"><label>Serwer</label></a>
             </div>
         </div>
     </div>
@@ -86,10 +95,14 @@
     <script>
         function optionsChanged() {
 
-            if (document.getElementById("optionsSelect").value == 'custom')
+            if (document.getElementById("optionsSelect").value == 'custom') {
                 document.getElementById("optionsDiv").style = "";
-            else
+                document.getElementById("signDiv").style = "display: none;";
+            }
+            else {
                 document.getElementById("optionsDiv").style = "display: none;";
+                document.getElementById("signDiv").style = "";
+            }
         }
     </script>
 
